@@ -1,8 +1,16 @@
 package br.soujava.collabtime;
 
 public class CalculatorVisitor extends  ExprBaseVisitor<Calculator.Expr> implements  ExprVisitor<Calculator.Expr> {
+
+
     @Override
     public Calculator.Expr visitTypeInt(ExprParser.TypeIntContext ctx) {
+        double value = Double.valueOf( ctx.getChild(0).getText());
+        return Calculator.valueOf(value);
+    }
+
+    @Override
+    public Calculator.Expr visitTypeDouble(ExprParser.TypeDoubleContext ctx) {
         double value = Double.valueOf( ctx.getChild(0).getText());
         return Calculator.valueOf(value);
     }

@@ -9,10 +9,10 @@ public class Calculator {
         // (((1.0+1.0)*2.0)/4.0)
         var expression =
                 valueOf(1)
-                .sum(valueOf(3))
-                .subtract(valueOf(2))
-                .multiply(valueOf(2))
-                .divide(valueOf(4));
+                        .sum(valueOf(3))
+                        .subtract(valueOf(2))
+                        .multiply(valueOf(2))
+                        .divide(valueOf(4));
 
         System.out.println("%s = %s".formatted(asText(expression), evaluate(expression)));
 

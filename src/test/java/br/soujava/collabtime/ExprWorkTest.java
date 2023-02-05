@@ -43,4 +43,12 @@ public class ExprWorkTest
         String exprAsText = exprWork.process("(2+3)*5");
         assertEquals("((2.0+3.0)*5.0) = 25.0", exprAsText);
     }
+
+    @Test
+    public void shouldAnswerComplex3()
+    {
+        String exprAsText = exprWork.process("(2.1+3.1)*5");
+        assertEquals("((2.1+3.1)*5.0) = 26.0", exprAsText);
+    }
+
 }
